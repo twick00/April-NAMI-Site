@@ -1,0 +1,144 @@
+
+text = #444948;
+background = #ffffff
+content-background = #d4e0de
+
+
+.BodyContent
+    z-index 3
+
+.main-man-enter-done
+    transform: translate(0)
+    opacity 1
+.main-man-enter
+    transition all 2s
+    transform translateX(-120%)
+    opacity .1
+    &.main-man-enter-active
+        // transition: opacity 0.1s visibility 0.1s
+        transform translate(0)
+        opacity 1
+.description-content-enter-done
+    transform: translate(0);
+    opacity 1
+.description-content-enter
+    transition all 2s
+    transform translateY(120%)
+    opacity .1
+    &.description-content-enter-active
+        transform translate(0)
+        opacity 1
+p
+    font-family: 'Open Sans', sans-serif;
+h3 h4 h5
+    font-family: 'Open Sans', sans-serif;
+@media screen and (min-width: 800px)
+    .body-content-two-image
+                position: absolute
+                left: -20vw
+                background-size 2000px
+                background-position: 50% -7px
+                z-index 0
+                height 100%
+                width: 100%
+                transition: 0s linear;
+                transition-property: background-position;
+    .text-holder
+        background background
+        h3
+            font-size: 13px
+            font-family: 'Raleway', sans-serif;
+
+    body .App
+        text-align: unset
+    body
+        background-color: background
+        overflow-x: hidden
+    .body-content
+        grid-template-columns: 50% 50%
+        grid-auto-rows: 100%
+        background-color: background;
+        height 100vh;
+        // width: 100vw;
+        display: grid
+        .split-right
+            z-index 4
+            width: 100%
+            height 100%
+            margin-top auto
+            margin-bottom: auto
+            padding-top auto 
+            padding-bottom: auto
+            h3
+                margin 30px
+                font-size: 14px
+                // margin 12px
+        .split-left
+            background-color: content-background;
+            width: 100%
+    .header-content
+        display grid
+        // position absolute
+        top 0px
+        left 0px
+        grid-template-columns: 50% 50%
+        grid-template-rows: 100vh
+        // overflow hidden
+        .image-holder
+            .background-image
+                background-size 2000px
+                background-position: 50% 0
+                z-index -1
+                height 100%
+                width: 100%
+                transition: 0s linear;
+                transition-property: background-position;
+        .content-holder
+            z-index 0
+            background: background
+            display: grid
+            grid-template-rows: 2fr 1fr 1fr 1fr 3fr
+            p
+                margin 30px
+                font-family: 'Playfair Display', serif;
+            h1
+                text-align: center
+                font-size: 70px
+                font-family: 'Playfair Display', serif;
+    .navbar 
+        z-index 99
+        display grid
+        grid-template-columns: 300px 10fr
+        opacity: 0.7
+        background content-background
+        border: 1px solid black
+        position: fixed
+        width: 100%
+        top: 0px
+        left: 0px
+        height 65px
+        justify-content: center
+        .header-text
+            font-family: 'Playfair Display', serif;
+
+            font-size: 28px
+            margin auto
+            margin-left: 30px
+            // border: 1px solid blue
+            list-style-type: none
+        .right-bar
+            width: 65%
+            height 100%
+            margin auto
+            margin-right 20px
+            display grid
+            grid-auto-rows: 1fr
+            grid-template-columns: 1fr 1fr 1fr
+            a
+                font-family: 'Playfair Display', serif;
+                font-size: 22px
+                margin auto
+                list-style-type none
+                color: #494949
+            a:visited 
+                color: #494949
